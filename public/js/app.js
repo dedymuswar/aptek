@@ -3297,6 +3297,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -3312,6 +3314,8 @@ __webpack_require__.r(__webpack_exports__);
       },
       hasilnya: false,
       hasilakhir: "",
+      hasiljupar: "",
+      hasilloday: "",
       submitted: false
     };
   },
@@ -3354,17 +3358,9 @@ __webpack_require__.r(__webpack_exports__);
       var bagibawah = parseFloat(this.rrawat.hke);
       var loday = bagiatas / bagibawah * jupar;
       var hasil = (jupar + loday) * 25 / 100;
-      this.hasilakhir = hasil.toFixed(2); //   const AB365 =
-      //     parseInt(this.gillies.jperawatan) *
-      //     parseInt(this.gillies.sharian) *
-      //     parseInt(this.gillies.perhari)
-      //   const C363JamKerja =
-      //     (parseInt(this.gillies.perhari) - parseInt(this.gillies.hlibur)) *
-      //     parseInt(this.gillies.perhari)
-      //   const hasil = AB365 / C363JamKerja
-      //   this.hasilakhir = hasil.toFixed(2)
-      // console.log(hasilakhir)
-
+      this.hasilakhir = hasil.toFixed(2);
+      this.hasiljupar = jupar.toFixed(0);
+      this.hasilloday = loday.toFixed(2);
       this.hasilnya = true;
     },
     reLoad: function reLoad() {
@@ -41513,13 +41509,21 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
+                    _c("h4", [
+                      _vm._v("Jumlah Perawat = " + _vm._s(_vm.hasiljupar))
+                    ]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "mb-2" }, [
+                      _vm._v("Loss day = " + _vm._s(_vm.hasilloday))
+                    ]),
+                    _vm._v(" "),
                     _c("p", { staticClass: "card-text" }, [
                       _vm._v("Jumlah Tenaga yang dibutuhkan =")
                     ]),
                     _vm._v(" "),
                     _c("div", { staticStyle: { display: "inline-block" } }, [
                       _c("h2", [_vm._v(_vm._s(_vm.hasilakhir))]),
-                      _vm._v("Tenaga Perawat\n              ")
+                      _vm._v(" Perawat\n              ")
                     ])
                   ])
                 ]
