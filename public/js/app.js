@@ -1932,181 +1932,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormDepkes.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormDepkes.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
-/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      depkes: {
-        jperawatan: "",
-        m52: "",
-        hari7: "",
-        tt: "",
-        bor: ""
-      },
-      hasilnya: false,
-      hasilakhir: "",
-      submitted: false
-    };
-  },
-  validations: {
-    depkes: {
-      jperawatan: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
-      },
-      m52: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
-      },
-      hari7: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
-      },
-      tt: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
-      },
-      bor: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
-      }
-    }
-  },
-  methods: {
-    onHitung: function onHitung() {
-      this.submitted = true;
-      this.$v.$touch();
-
-      if (this.$v.$invalid) {
-        return;
-      } //   const AB365 =
-      //     parseInt(this.gillies.jperawatan) *
-      //     parseInt(this.gillies.sharian) *
-      //     parseInt(this.gillies.perhari)
-      //   const C363JamKerja =
-      //     (parseInt(this.gillies.perhari) - parseInt(this.gillies.hlibur)) *
-      //     parseInt(this.gillies.perhari)
-      //   const hasil = AB365 / C363JamKerja
-      //   this.hasilakhir = hasil.toFixed(2)
-      // console.log(hasilakhir)
-
-
-      this.hasilnya = true;
-    },
-    reLoad: function reLoad() {
-      this.gillies = {};
-      this.hasilnya = false;
-    }
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormDoughlas.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormDoughlas.vue?vue&type=script&lang=js& ***!
@@ -2524,11 +2349,11 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var AB365 = parseInt(this.gillies.jperawatan) * parseInt(this.gillies.sharian) * parseInt(this.gillies.perhari);
-      var C363JamKerja = (parseInt(this.gillies.perhari) - parseInt(this.gillies.hlibur)) * parseInt(this.gillies.perhari);
-      var hasil = AB365 / C363JamKerja;
-      this.hasilakhir = hasil.toFixed(2); // console.log(hasilakhir)
-
+      var atas = parseInt(this.gillies.jperawatan) * parseInt(this.gillies.sharian) * parseInt(this.gillies.perhari);
+      var bawahsatu = parseInt(this.gillies.perhari) - parseInt(this.gillies.hlibur);
+      var bawah = bawahsatu * parseInt(this.gillies.perhari);
+      var hasil = atas / bawah;
+      this.hasilakhir = hasil.toFixed(2);
       this.hasilnya = true;
     },
     reLoad: function reLoad() {
@@ -2551,6 +2376,22 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2679,12 +2520,255 @@ __webpack_require__.r(__webpack_exports__);
       var atas = parseInt(this.ilyas.jperawatan) * parseInt(this.ilyas.sharian) * parseInt(this.ilyas.jkerja);
       var bawah = 255 * parseInt(this.ilyas.hkerja);
       var hasil = atas / bawah;
-      this.hasilakhir = hasil.toFixed(2); //   console.log(hasilakhir)
-
+      this.hasilakhir = hasil.toFixed(2);
       this.hasilnya = true;
     },
     reLoad: function reLoad() {
       this.gillies = {};
+      this.hasilnya = false;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormKamarok.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormKamarok.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      kamarok: {
+        jupaso: "",
+        jupase: "",
+        jupasi: "",
+        lamobe: "",
+        lamose: "",
+        lamoci: "",
+        jutepa: "",
+        jke: ""
+      },
+      hasilnya: false,
+      hasilakhir: "",
+      submitted: false
+    };
+  },
+  validations: {
+    kamarok: {
+      jupaso: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      jupase: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      jupasi: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      lamobe: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      lamose: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      lamoci: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      jutepa: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      jke: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      }
+    }
+  },
+  methods: {
+    onHitung: function onHitung() {
+      this.submitted = true;
+      this.$v.$touch();
+
+      if (this.$v.$invalid) {
+        return;
+      }
+
+      var atasatu = parseInt(this.kamarok.jupaso) * parseInt(this.kamarok.lamobe);
+      var atadua = parseInt(this.kamarok.jupase) * parseInt(this.kamarok.lamose);
+      var atatiga = parseInt(this.kamarok.jupasi) * parseInt(this.kamarok.lamoci);
+      var japera = atasatu + atadua + atatiga;
+      var batassatu = japera + parseInt(this.kamarok.jutepa);
+      var hasil = batassatu / parseInt(this.kamarok.jke);
+      this.hasilakhir = hasil.toFixed(2);
+      this.hasilnya = true;
+    },
+    reLoad: function reLoad() {
+      this.kamarok = {};
       this.hasilnya = false;
     }
   }
@@ -2822,6 +2906,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      minggudlmsetahun: 52,
       ppni: {
         jperawatan: "",
         jttidur: "",
@@ -2862,16 +2947,636 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      console.log("oke");
-      var atas = parseInt(this.ppni.jperawatan) * (7 * (parseInt(this.ppni.jttidur) * parseInt(this.ppni.bor))) + 25 / 100;
+      console.log(this.minggudlmsetahun);
+      var atassatu = parseInt(this.ppni.jperawatan) * this.minggudlmsetahun;
+      var atasdua = 7 * (parseInt(this.ppni.jttidur) * parseInt(this.ppni.bor));
+      var atastiga = atassatu * atasdua;
+      var atas = atastiga + 25 / 100;
       var bawah = parseInt(this.ppni.hke) * parseInt(this.ppni.jkp);
       var hasil = atas / bawah;
-      this.hasilakhir = hasil.toFixed(2); // console.log(hasilakhir)
-
+      this.hasilakhir = hasil.toFixed(2);
       this.hasilnya = true;
     },
     reLoad: function reLoad() {
       this.ppni = {};
+      this.hasilnya = false;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormRjalan.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormRjalan.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      rjalan: {
+        rapas: "",
+        rajam: "",
+        jke: "",
+        enampuluh: "",
+        fakor: ""
+      },
+      hasilnya: false,
+      hasilakhir: "",
+      submitted: false
+    };
+  },
+  validations: {
+    rjalan: {
+      rapas: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      rajam: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      jke: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      enampuluh: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      fakor: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      }
+    }
+  },
+  methods: {
+    onHitung: function onHitung() {
+      this.submitted = true;
+      this.$v.$touch();
+
+      if (this.$v.$invalid) {
+        return;
+      }
+
+      var atas = parseInt(this.rjalan.rapas) + parseInt(this.rjalan.rajam);
+      var bawah = parseInt(this.rjalan.jke) * parseInt(this.rjalan.enampuluh);
+      var subhasil = atas / bawah;
+      var hasil = subhasil + parseInt(this.rjalan.fakor);
+      this.hasilakhir = hasil.toFixed(2); //   console.log(hasilakhir)
+
+      this.hasilnya = true;
+    },
+    reLoad: function reLoad() {
+      this.rjalan = {};
+      this.hasilnya = false;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormRrawat.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormRrawat.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      rrawat: {
+        rajam: "",
+        jupas: "",
+        jke: "",
+        juming: "",
+        lisar: "",
+        cutan: "",
+        hke: ""
+      },
+      hasilnya: false,
+      hasilakhir: "",
+      submitted: false
+    };
+  },
+  validations: {
+    rrawat: {
+      rajam: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      jupas: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      jke: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      juming: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      lisar: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      cutan: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      hke: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      }
+    }
+  },
+  methods: {
+    onHitung: function onHitung() {
+      this.submitted = true;
+      this.$v.$touch();
+
+      if (this.$v.$invalid) {
+        return;
+      }
+
+      var jupar = parseFloat(this.rrawat.rajam) * parseFloat(this.rrawat.jupas);
+      var bagiatas = parseFloat(this.rrawat.juming) + parseFloat(this.rrawat.cutan) + parseFloat(this.rrawat.lisar);
+      var bagibawah = parseFloat(this.rrawat.hke);
+      var loday = bagiatas / bagibawah * jupar;
+      var hasil = (jupar + loday) * 25 / 100;
+      this.hasilakhir = hasil.toFixed(2); //   const AB365 =
+      //     parseInt(this.gillies.jperawatan) *
+      //     parseInt(this.gillies.sharian) *
+      //     parseInt(this.gillies.perhari)
+      //   const C363JamKerja =
+      //     (parseInt(this.gillies.perhari) - parseInt(this.gillies.hlibur)) *
+      //     parseInt(this.gillies.perhari)
+      //   const hasil = AB365 / C363JamKerja
+      //   this.hasilakhir = hasil.toFixed(2)
+      // console.log(hasilakhir)
+
+      this.hasilnya = true;
+    },
+    reLoad: function reLoad() {
+      this.rrawat = {};
+      this.hasilnya = false;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormUgd.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormUgd.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      ugd: {
+        rapas: "",
+        rajam: "",
+        jke: "",
+        haming: "",
+        cutan: "",
+        lisar: ""
+      },
+      hasilnya: false,
+      hasilakhir: "",
+      submitted: false
+    };
+  },
+  validations: {
+    ugd: {
+      rapas: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      jupas: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      jke: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      haming: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      cutan: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      lisar: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      }
+    }
+  },
+  methods: {
+    onHitung: function onHitung() {
+      this.submitted = true;
+      this.$v.$touch();
+
+      if (this.$v.$invalid) {
+        return;
+      }
+
+      var atas = parseInt(this.ugd.rapas) * parseInt(this.ugd.jupas);
+      var bawah = parseInt(this.ugd.jke);
+      var suba = atas / bawah;
+      var loday = parseInt(this.ugd.haming) + parseInt(this.ugd.cutan) + parseInt(this.ugd.lisar);
+      var hasil = suba * loday;
+      this.hasilakhir = hasil.toFixed(2); //   console.log(hasilakhir)
+
+      this.hasilnya = true;
+    },
+    reLoad: function reLoad() {
+      this.ugd = {};
       this.hasilnya = false;
     }
   }
@@ -38454,336 +39159,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormDepkes.vue?vue&type=template&id=6b61d779&":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormDepkes.vue?vue&type=template&id=6b61d779& ***!
-  \*************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-sm-6" }, [
-        _c(
-          "form",
-          {
-            on: {
-              submit: function($event) {
-                $event.preventDefault()
-              }
-            }
-          },
-          [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { staticClass: "control-label" }, [
-                _vm._v("Jam Perawatan")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.depkes.jperawatan,
-                    expression: "depkes.jperawatan"
-                  }
-                ],
-                staticClass: "form-control",
-                class: {
-                  "is-invalid": _vm.submitted && _vm.$v.depkes.jperawatan.$error
-                },
-                attrs: {
-                  type: "text",
-                  name: "jperawatan",
-                  placeholder: "Waktu perawatan yang dibutuhkan pasien"
-                },
-                domProps: { value: _vm.depkes.jperawatan },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.depkes, "jperawatan", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm.submitted && _vm.$v.depkes.jperawatan.$error
-                ? _c("div", { staticClass: "invalid-feedback" }, [
-                    !_vm.$v.depkes.jperawatan.required
-                      ? _c("span", [
-                          _vm._v(
-                            "Waktu perawatan yang dibutuhkan pasien harus terisi"
-                          )
-                        ])
-                      : _vm._e()
-                  ])
-                : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { staticClass: "control-label" }, [
-                _vm._v("52 Minggu")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.depkes.m52,
-                    expression: "depkes.m52"
-                  }
-                ],
-                staticClass: "form-control",
-                class: {
-                  "is-invalid": _vm.submitted && _vm.$v.depkes.m52.$error
-                },
-                attrs: { type: "text", name: "m52", placeholder: "52 Minggu" },
-                domProps: { value: _vm.depkes.m52 },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.depkes, "m52", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm.submitted && _vm.$v.depkes.m52.$error
-                ? _c("div", { staticClass: "invalid-feedback" }, [
-                    !_vm.$v.depkes.m52.required
-                      ? _c("span", [_vm._v("field 52 Minggu harus terisi")])
-                      : _vm._e()
-                  ])
-                : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { staticClass: "control-label" }, [_vm._v("7 Hari")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.depkes.hari7,
-                    expression: "depkes.hari7"
-                  }
-                ],
-                staticClass: "form-control",
-                class: {
-                  "is-invalid": _vm.submitted && _vm.$v.depkes.hari7.$error
-                },
-                attrs: { type: "text", name: "hari7", placeholder: "7 Hari" },
-                domProps: { value: _vm.depkes.hari7 },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.depkes, "hari7", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm.submitted && _vm.$v.depkes.hari7.$error
-                ? _c("div", { staticClass: "invalid-feedback" }, [
-                    !_vm.$v.depkes.hari7.required
-                      ? _c("span", [_vm._v("field 7 Hari harus terisi")])
-                      : _vm._e()
-                  ])
-                : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { staticClass: "control-label" }, [
-                _vm._v("Tempat Tidur (TT)")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.depkes.tt,
-                    expression: "depkes.tt"
-                  }
-                ],
-                staticClass: "form-control",
-                class: {
-                  "is-invalid": _vm.submitted && _vm.$v.depkes.tt.$error
-                },
-                attrs: {
-                  type: "text",
-                  name: "tt",
-                  placeholder: "jumlah tempat tidur"
-                },
-                domProps: { value: _vm.depkes.tt },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.depkes, "tt", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm.submitted && _vm.$v.depkes.tt.$error
-                ? _c("div", { staticClass: "invalid-feedback" }, [
-                    !_vm.$v.depkes.tt.required
-                      ? _c("span", [_vm._v("jumlah tempat tidur harus terisi")])
-                      : _vm._e()
-                  ])
-                : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { staticClass: "control-label" }, [
-                _vm._v("Bed Occupation Rate (BOR)")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.depkes.bor,
-                    expression: "depkes.bor"
-                  }
-                ],
-                staticClass: "form-control",
-                class: {
-                  "is-invalid": _vm.submitted && _vm.$v.depkes.bor.$error
-                },
-                attrs: {
-                  type: "text",
-                  name: "bor",
-                  placeholder: "jumlah Bed Occupation Rate"
-                },
-                domProps: { value: _vm.depkes.bor },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.depkes, "bor", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm.submitted && _vm.$v.depkes.bor.$error
-                ? _c("div", { staticClass: "invalid-feedback" }, [
-                    !_vm.$v.depkes.bor.required
-                      ? _c("span", [
-                          _vm._v("jumlah Bed Occupation Rate harus terisi")
-                        ])
-                      : _vm._e()
-                  ])
-                : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-secondary",
-                attrs: { type: "button" },
-                on: { click: _vm.reLoad }
-              },
-              [_vm._v("Refresh")]
-            ),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-primary",
-                attrs: { type: "button" },
-                on: { click: _vm.onHitung }
-              },
-              [_vm._v("Submit")]
-            )
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-sm-6" }, [
-        _vm.hasilnya && _vm.submitted
-          ? _c("div", { staticClass: "mb-5" }, [
-              _c(
-                "div",
-                { staticClass: "card text-white bg-success text-center" },
-                [
-                  _c("div", { staticClass: "card-header" }, [
-                    _vm._v("Hasil perhitungan dengan metode DEPKES")
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body text-center" }, [
-                    _c(
-                      "svg",
-                      {
-                        staticClass: "feather feather-users",
-                        attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          width: "24",
-                          height: "24",
-                          viewBox: "0 0 24 24",
-                          fill: "none",
-                          stroke: "currentColor",
-                          "stroke-width": "2",
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round"
-                        }
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                          }
-                        }),
-                        _c("circle", { attrs: { cx: "9", cy: "7", r: "4" } }),
-                        _c("path", {
-                          attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" }
-                        }),
-                        _c("path", {
-                          attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "card-text" }, [
-                      _vm._v("Jumlah Tenaga yang dibutuhkan =")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticStyle: { display: "inline-block" } }, [
-                      _c("h2", [_vm._v(_vm._s(_vm.hasilakhir))]),
-                      _vm._v("Tenaga Perawat\n              ")
-                    ])
-                  ])
-                ]
-              )
-            ])
-          : _vm._e()
-      ])
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormDoughlas.vue?vue&type=template&id=7bab2362&":
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormDoughlas.vue?vue&type=template&id=7bab2362& ***!
@@ -39840,12 +40215,15 @@ var render = function() {
                                 d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
                               }
                             }),
+                            _vm._v(" "),
                             _c("circle", {
                               attrs: { cx: "9", cy: "7", r: "4" }
                             }),
+                            _vm._v(" "),
                             _c("path", {
                               attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" }
                             }),
+                            _vm._v(" "),
                             _c("path", {
                               attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" }
                             })
@@ -39891,6 +40269,492 @@ var render = function() {
           },
           [_vm._v("Submit")]
         )
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormKamarok.vue?vue&type=template&id=2273ada5&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormKamarok.vue?vue&type=template&id=2273ada5& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-sm-6" }, [
+        _vm.hasilnya && _vm.submitted
+          ? _c("div", { staticClass: "mb-5" }, [
+              _c(
+                "div",
+                { staticClass: "card text-white bg-success text-center" },
+                [
+                  _c("div", { staticClass: "card-header" }, [
+                    _vm._v("Hasil perhitungan dengan metode DEPKES - Kamar OK")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body text-center" }, [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "feather feather-users",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          width: "24",
+                          height: "24",
+                          viewBox: "0 0 24 24",
+                          fill: "none",
+                          stroke: "currentColor",
+                          "stroke-width": "2",
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("circle", { attrs: { cx: "9", cy: "7", r: "4" } }),
+                        _vm._v(" "),
+                        _c("path", {
+                          attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" }
+                        }),
+                        _vm._v(" "),
+                        _c("path", {
+                          attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [
+                      _vm._v("Jumlah Tenaga yang dibutuhkan =")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticStyle: { display: "inline-block" } }, [
+                      _c("h2", [_vm._v(_vm._s(_vm.hasilakhir))]),
+                      _vm._v("Tenaga Perawat\n            ")
+                    ])
+                  ])
+                ]
+              )
+            ])
+          : _vm._e()
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+          }
+        }
+      },
+      [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-sm-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jumlah pasien operasi (besar)")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.kamarok.jupaso,
+                    expression: "kamarok.jupaso"
+                  }
+                ],
+                staticClass: "form-control jupaso",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.kamarok.jupaso.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "jupaso",
+                  placeholder: "Jumlah pasien operasi (besar)"
+                },
+                domProps: { value: _vm.kamarok.jupaso },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.kamarok, "jupaso", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.kamarok.jupaso.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.kamarok.jupaso.required
+                      ? _c("span", [
+                          _vm._v("Jumlah pasien operasi (besar) harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jumlah pasien operasi (sedang)")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.kamarok.jupase,
+                    expression: "kamarok.jupase"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.kamarok.jupase.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "jupase",
+                  placeholder: "Jumlah pasien operasi (sedang)"
+                },
+                domProps: { value: _vm.kamarok.jupase },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.kamarok, "jupase", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.kamarok.jupase.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.kamarok.jupase.required
+                      ? _c("span", [
+                          _vm._v("Jumlah pasien operasi (sedang) harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jumlah pasien operasi (kecil)")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.kamarok.jupasi,
+                    expression: "kamarok.jupasi"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.kamarok.jupasi.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "jupasi",
+                  placeholder: "Jumlah pasien operasi (kecil)"
+                },
+                domProps: { value: _vm.kamarok.jupasi },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.kamarok, "jupasi", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.kamarok.jupasi.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.kamarok.jupasi.required
+                      ? _c("span", [
+                          _vm._v("Jumlah pasien operasi (kecil) harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Lama operasi (besar)")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.kamarok.lamobe,
+                    expression: "kamarok.lamobe"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.kamarok.lamobe.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "lamobe",
+                  placeholder: "Lama operasi (besar)"
+                },
+                domProps: { value: _vm.kamarok.lamobe },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.kamarok, "lamobe", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.kamarok.lamobe.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.kamarok.lamobe.required
+                      ? _c("span", [
+                          _vm._v("Lama operasi (besar) harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Lama operasi (sedang)")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.kamarok.lamose,
+                    expression: "kamarok.lamose"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.kamarok.lamose.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "lamose",
+                  placeholder: "Lama operasi (sedang)"
+                },
+                domProps: { value: _vm.kamarok.lamose },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.kamarok, "lamose", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.kamarok.lamose.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.kamarok.lamose.required
+                      ? _c("span", [
+                          _vm._v("Lama operasi (sedang) harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Lama operasi (kecil)")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.kamarok.lamoci,
+                    expression: "kamarok.lamoci"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.kamarok.lamoci.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "lamoci",
+                  placeholder: "Lama operasi (kecil)"
+                },
+                domProps: { value: _vm.kamarok.lamoci },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.kamarok, "lamoci", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.kamarok.lamoci.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.kamarok.lamoci.required
+                      ? _c("span", [
+                          _vm._v("Lama operasi (kecil) harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jumlah tenaga perawat / tim")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.kamarok.jutepa,
+                    expression: "kamarok.jutepa"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.kamarok.jutepa.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "jutepa",
+                  placeholder: "Jumlah tenaga perawat / tim"
+                },
+                domProps: { value: _vm.kamarok.jutepa },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.kamarok, "jutepa", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.kamarok.jutepa.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.kamarok.jutepa.required
+                      ? _c("span", [
+                          _vm._v("Jumlah tenaga perawat / tim harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jumlah kerja efektif")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.kamarok.jke,
+                    expression: "kamarok.jke"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.kamarok.jke.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "jke",
+                  placeholder: "Jumlah kerja efektif"
+                },
+                domProps: { value: _vm.kamarok.jke },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.kamarok, "jke", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.kamarok.jke.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.kamarok.jke.required
+                      ? _c("span", [
+                          _vm._v("Jumlah kerja efektif harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-secondary",
+                attrs: { type: "button" },
+                on: { click: _vm.reLoad }
+              },
+              [_vm._v("Refresh")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { type: "button" },
+                on: { click: _vm.onHitung }
+              },
+              [_vm._v("Submit")]
+            )
+          ])
+        ])
       ]
     )
   ])
@@ -40236,6 +41100,1169 @@ var render = function() {
           : _vm._e()
       ])
     ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormRjalan.vue?vue&type=template&id=77521742&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormRjalan.vue?vue&type=template&id=77521742& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-sm-6" }, [
+        _vm.hasilnya && _vm.submitted
+          ? _c("div", { staticClass: "mb-5" }, [
+              _c(
+                "div",
+                { staticClass: "card text-white bg-success text-center" },
+                [
+                  _c("div", { staticClass: "card-header" }, [
+                    _vm._v(
+                      "Hasil perhitungan dengan metode DEPKES - Rawat Jalan"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body text-center" }, [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "feather feather-users",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          width: "24",
+                          height: "24",
+                          viewBox: "0 0 24 24",
+                          fill: "none",
+                          stroke: "currentColor",
+                          "stroke-width": "2",
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("circle", { attrs: { cx: "9", cy: "7", r: "4" } }),
+                        _vm._v(" "),
+                        _c("path", {
+                          attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" }
+                        }),
+                        _vm._v(" "),
+                        _c("path", {
+                          attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [
+                      _vm._v("Jumlah Tenaga yang dibutuhkan =")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticStyle: { display: "inline-block" } }, [
+                      _c("h2", [_vm._v(_vm._s(_vm.hasilakhir))]),
+                      _vm._v("Tenaga Perawat\n            ")
+                    ])
+                  ])
+                ]
+              )
+            ])
+          : _vm._e()
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+          }
+        }
+      },
+      [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-sm-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Rata-rata pasien / hari")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rjalan.rapas,
+                    expression: "rjalan.rapas"
+                  }
+                ],
+                staticClass: "form-control rapas",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rjalan.rapas.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "rapas",
+                  placeholder: "Rata rata pasien perhari"
+                },
+                domProps: { value: _vm.rjalan.rapas },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rjalan, "rapas", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rjalan.rapas.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rjalan.rapas.required
+                      ? _c("span", [
+                          _vm._v("Rata rata pasien perhari harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Rata-rata jam perawatan / hari")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rjalan.rajam,
+                    expression: "rjalan.rajam"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rjalan.rajam.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "rajam",
+                  placeholder: "Rata-rata jam perawatan / hari"
+                },
+                domProps: { value: _vm.rjalan.rajam },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rjalan, "rajam", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rjalan.rajam.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rjalan.rajam.required
+                      ? _c("span", [
+                          _vm._v("Rata-rata jam perawatan / hari harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jam kerja efektif")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rjalan.jke,
+                    expression: "rjalan.jke"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rjalan.jke.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "jke",
+                  placeholder: "Jam kerja efektif"
+                },
+                domProps: { value: _vm.rjalan.jke },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rjalan, "jke", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rjalan.jke.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rjalan.jke.required
+                      ? _c("span", [_vm._v("Jam kerja efektif harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [_vm._v("60")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rjalan.enampuluh,
+                    expression: "rjalan.enampuluh"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rjalan.enampuluh.$error
+                },
+                attrs: { type: "number", name: "enampuluh", placeholder: "60" },
+                domProps: { value: _vm.rjalan.enampuluh },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rjalan, "enampuluh", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rjalan.enampuluh.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rjalan.enampuluh.required
+                      ? _c("span", [_vm._v("60 harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Faktor Koreksi (15%)")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rjalan.fakor,
+                    expression: "rjalan.fakor"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rjalan.fakor.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "fakor",
+                  placeholder: "Faktor Koreksi"
+                },
+                domProps: { value: _vm.rjalan.fakor },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rjalan, "fakor", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rjalan.fakor.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rjalan.fakor.required
+                      ? _c("span", [_vm._v("Faktor Koreksi harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-secondary",
+                attrs: { type: "button" },
+                on: { click: _vm.reLoad }
+              },
+              [_vm._v("Refresh")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { type: "button" },
+                on: { click: _vm.onHitung }
+              },
+              [_vm._v("Submit")]
+            )
+          ])
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormRrawat.vue?vue&type=template&id=a698f590&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormRrawat.vue?vue&type=template&id=a698f590& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-sm-6" }, [
+        _vm.hasilnya && _vm.submitted
+          ? _c("div", { staticClass: "mb-5" }, [
+              _c(
+                "div",
+                { staticClass: "card text-white bg-success text-center" },
+                [
+                  _c("div", { staticClass: "card-header" }, [
+                    _vm._v(
+                      "Hasil perhitungan dengan metode DEPKES Ruangan rawat"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body text-center" }, [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "feather feather-users",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          width: "24",
+                          height: "24",
+                          viewBox: "0 0 24 24",
+                          fill: "none",
+                          stroke: "currentColor",
+                          "stroke-width": "2",
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                          }
+                        }),
+                        _c("circle", { attrs: { cx: "9", cy: "7", r: "4" } }),
+                        _c("path", {
+                          attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" }
+                        }),
+                        _c("path", {
+                          attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [
+                      _vm._v("Jumlah Tenaga yang dibutuhkan =")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticStyle: { display: "inline-block" } }, [
+                      _c("h2", [_vm._v(_vm._s(_vm.hasilakhir))]),
+                      _vm._v("Tenaga Perawat\n              ")
+                    ])
+                  ])
+                ]
+              )
+            ])
+          : _vm._e()
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+          }
+        }
+      },
+      [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-sm-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Rata-rata jam perawatan pasien per hari")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rrawat.rajam,
+                    expression: "rrawat.rajam"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rrawat.rajam.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "rajam",
+                  placeholder: "Rata-rata jam perawatan pasien per hari"
+                },
+                domProps: { value: _vm.rrawat.rajam },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rrawat, "rajam", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rrawat.rajam.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rrawat.rajam.required
+                      ? _c("span", [
+                          _vm._v(
+                            "Rata-rata jam perawatan pasien per hari harus diisi"
+                          )
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jumlah Pasien")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rrawat.jupas,
+                    expression: "rrawat.jupas"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rrawat.jupas.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "jupas",
+                  placeholder: "Jumlah Pasien"
+                },
+                domProps: { value: _vm.rrawat.jupas },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rrawat, "jupas", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rrawat.jupas.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rrawat.jupas.required
+                      ? _c("span", [_vm._v("field Jumlah pasien harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jumlah Kerja Efektif")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rrawat.jke,
+                    expression: "rrawat.jke"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rrawat.jke.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "jke",
+                  placeholder: "Jumlah kerja efektif"
+                },
+                domProps: { value: _vm.rrawat.jke },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rrawat, "jke", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rrawat.jke.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rrawat.jke.required
+                      ? _c("span", [
+                          _vm._v("field Jumlah kerja efektif harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jumlah minggu dalam setahun")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rrawat.juming,
+                    expression: "rrawat.juming"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rrawat.juming.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "juming",
+                  placeholder: "jumlah minggu dalam setahun"
+                },
+                domProps: { value: _vm.rrawat.juming },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rrawat, "juming", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rrawat.juming.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rrawat.juming.required
+                      ? _c("span", [
+                          _vm._v("jumlah minggu dalam setahun harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Libur Besar")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rrawat.lisar,
+                    expression: "rrawat.lisar"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rrawat.lisar.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "lisar",
+                  placeholder: "Libur Besar"
+                },
+                domProps: { value: _vm.rrawat.lisar },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rrawat, "lisar", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rrawat.lisar.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rrawat.lisar.required
+                      ? _c("span", [_vm._v("Libur Besar harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Cuti Tahunan")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rrawat.cutan,
+                    expression: "rrawat.cutan"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rrawat.cutan.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "cutan",
+                  placeholder: "Cuti Tahunan"
+                },
+                domProps: { value: _vm.rrawat.cutan },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rrawat, "cutan", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rrawat.cutan.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rrawat.cutan.required
+                      ? _c("span", [_vm._v("Cuti Tahunan harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Hari Kerja Efektif")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rrawat.hke,
+                    expression: "rrawat.hke"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.rrawat.hke.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "hke",
+                  placeholder: "Hari Kerja Efektif"
+                },
+                domProps: { value: _vm.rrawat.hke },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.rrawat, "hke", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.rrawat.hke.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.rrawat.hke.required
+                      ? _c("span", [
+                          _vm._v("field Hari kerja efektif harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-secondary",
+                attrs: { type: "button" },
+                on: { click: _vm.reLoad }
+              },
+              [_vm._v("Refresh")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { type: "button" },
+                on: { click: _vm.onHitung }
+              },
+              [_vm._v("Submit")]
+            )
+          ])
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormUgd.vue?vue&type=template&id=c4a809da&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormUgd.vue?vue&type=template&id=c4a809da& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-sm-6" }, [
+        _vm.hasilnya && _vm.submitted
+          ? _c("div", { staticClass: "mb-5" }, [
+              _c(
+                "div",
+                { staticClass: "card text-white bg-success text-center" },
+                [
+                  _c("div", { staticClass: "card-header" }, [
+                    _vm._v("Hasil perhitungan dengan metode DEPKES - UGD")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body text-center" }, [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "feather feather-users",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          width: "24",
+                          height: "24",
+                          viewBox: "0 0 24 24",
+                          fill: "none",
+                          stroke: "currentColor",
+                          "stroke-width": "2",
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("circle", { attrs: { cx: "9", cy: "7", r: "4" } }),
+                        _vm._v(" "),
+                        _c("path", {
+                          attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" }
+                        }),
+                        _vm._v(" "),
+                        _c("path", {
+                          attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [
+                      _vm._v("Jumlah Tenaga yang dibutuhkan =")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticStyle: { display: "inline-block" } }, [
+                      _c("h2", [_vm._v(_vm._s(_vm.hasilakhir))]),
+                      _vm._v("Tenaga Perawat\n            ")
+                    ])
+                  ])
+                ]
+              )
+            ])
+          : _vm._e()
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+          }
+        }
+      },
+      [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-sm-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Rata-rata jumlah pasien / hari")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.ugd.rapas,
+                    expression: "ugd.rapas"
+                  }
+                ],
+                staticClass: "form-control rapas",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.ugd.rapas.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "rapas",
+                  placeholder: "Rata rata pasien perhari"
+                },
+                domProps: { value: _vm.ugd.rapas },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.ugd, "rapas", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.ugd.rapas.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.ugd.rapas.required
+                      ? _c("span", [
+                          _vm._v("Rata rata pasien perhari harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jumlah Pasien")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.ugd.jupas,
+                    expression: "ugd.jupas"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.ugd.jupas.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "jupas",
+                  placeholder: "Jumlah Pasien"
+                },
+                domProps: { value: _vm.ugd.jupas },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.ugd, "jupas", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.ugd.jupas.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.ugd.jupas.required
+                      ? _c("span", [_vm._v("Jumlah Pasien harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Jam kerja efektif")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.ugd.jke,
+                    expression: "ugd.jke"
+                  }
+                ],
+                staticClass: "form-control",
+                class: { "is-invalid": _vm.submitted && _vm.$v.ugd.jke.$error },
+                attrs: {
+                  type: "number",
+                  name: "jke",
+                  placeholder: "Jam kerja efektif"
+                },
+                domProps: { value: _vm.ugd.jke },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.ugd, "jke", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.ugd.jke.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.ugd.jke.required
+                      ? _c("span", [_vm._v("Jam kerja efektif harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Hari minggu dalam 1 tahun")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.ugd.haming,
+                    expression: "ugd.haming"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.ugd.haming.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "haming",
+                  placeholder: "Hari minggu dalam 1 tahun"
+                },
+                domProps: { value: _vm.ugd.haming },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.ugd, "haming", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.ugd.haming.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.ugd.haming.required
+                      ? _c("span", [
+                          _vm._v("Hari minggu dalam 1 tahun harus terisi")
+                        ])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Cuti tahunan ")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.ugd.cutan,
+                    expression: "ugd.cutan"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.ugd.cutan.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "cutan",
+                  placeholder: "Cuti tahunan"
+                },
+                domProps: { value: _vm.ugd.cutan },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.ugd, "cutan", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.ugd.cutan.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.ugd.cutan.required
+                      ? _c("span", [_vm._v("Cuti tahunan harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [
+                _vm._v("Libur Besar ")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.ugd.lisar,
+                    expression: "ugd.lisar"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.ugd.lisar.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "lisar",
+                  placeholder: "Libur Besar"
+                },
+                domProps: { value: _vm.ugd.lisar },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.ugd, "lisar", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.ugd.lisar.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.ugd.lisar.required
+                      ? _c("span", [_vm._v("Libur Besar harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-secondary",
+                attrs: { type: "button" },
+                on: { click: _vm.reLoad }
+              },
+              [_vm._v("Refresh")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { type: "button" },
+                on: { click: _vm.onHitung }
+              },
+              [_vm._v("Submit")]
+            )
+          ])
+        ])
+      ]
+    )
   ])
 }
 var staticRenderFns = []
@@ -54390,8 +56417,11 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('example-component', __webp
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-gillies', __webpack_require__(/*! ./components/FormGillies.vue */ "./resources/js/components/FormGillies.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-ilyas', __webpack_require__(/*! ./components/FormIlyas.vue */ "./resources/js/components/FormIlyas.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-ppni', __webpack_require__(/*! ./components/FormPpni.vue */ "./resources/js/components/FormPpni.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-depkes', __webpack_require__(/*! ./components/FormDepkes.vue */ "./resources/js/components/FormDepkes.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-doughlas', __webpack_require__(/*! ./components/FormDoughlas.vue */ "./resources/js/components/FormDoughlas.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-rrawat', __webpack_require__(/*! ./components/FormRrawat.vue */ "./resources/js/components/FormRrawat.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-rjalan', __webpack_require__(/*! ./components/FormRjalan.vue */ "./resources/js/components/FormRjalan.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-ugd', __webpack_require__(/*! ./components/FormUgd.vue */ "./resources/js/components/FormUgd.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('form-kamarok', __webpack_require__(/*! ./components/FormKamarok.vue */ "./resources/js/components/FormKamarok.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -54513,75 +56543,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/FormDepkes.vue":
-/*!************************************************!*\
-  !*** ./resources/js/components/FormDepkes.vue ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDepkes_vue_vue_type_template_id_6b61d779___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDepkes.vue?vue&type=template&id=6b61d779& */ "./resources/js/components/FormDepkes.vue?vue&type=template&id=6b61d779&");
-/* harmony import */ var _FormDepkes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDepkes.vue?vue&type=script&lang=js& */ "./resources/js/components/FormDepkes.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDepkes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDepkes_vue_vue_type_template_id_6b61d779___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDepkes_vue_vue_type_template_id_6b61d779___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/FormDepkes.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/FormDepkes.vue?vue&type=script&lang=js&":
-/*!*************************************************************************!*\
-  !*** ./resources/js/components/FormDepkes.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDepkes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FormDepkes.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormDepkes.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDepkes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/FormDepkes.vue?vue&type=template&id=6b61d779&":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/FormDepkes.vue?vue&type=template&id=6b61d779& ***!
-  \*******************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDepkes_vue_vue_type_template_id_6b61d779___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./FormDepkes.vue?vue&type=template&id=6b61d779& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormDepkes.vue?vue&type=template&id=6b61d779&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDepkes_vue_vue_type_template_id_6b61d779___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDepkes_vue_vue_type_template_id_6b61d779___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -54794,6 +56755,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/FormKamarok.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/FormKamarok.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormKamarok_vue_vue_type_template_id_2273ada5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormKamarok.vue?vue&type=template&id=2273ada5& */ "./resources/js/components/FormKamarok.vue?vue&type=template&id=2273ada5&");
+/* harmony import */ var _FormKamarok_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormKamarok.vue?vue&type=script&lang=js& */ "./resources/js/components/FormKamarok.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormKamarok_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormKamarok_vue_vue_type_template_id_2273ada5___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormKamarok_vue_vue_type_template_id_2273ada5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/FormKamarok.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/FormKamarok.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/FormKamarok.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKamarok_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FormKamarok.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormKamarok.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKamarok_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/FormKamarok.vue?vue&type=template&id=2273ada5&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/FormKamarok.vue?vue&type=template&id=2273ada5& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKamarok_vue_vue_type_template_id_2273ada5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./FormKamarok.vue?vue&type=template&id=2273ada5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormKamarok.vue?vue&type=template&id=2273ada5&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKamarok_vue_vue_type_template_id_2273ada5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKamarok_vue_vue_type_template_id_2273ada5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/FormPpni.vue":
 /*!**********************************************!*\
   !*** ./resources/js/components/FormPpni.vue ***!
@@ -54858,6 +56888,213 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormPpni_vue_vue_type_template_id_00b4c88a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormPpni_vue_vue_type_template_id_00b4c88a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/FormRjalan.vue":
+/*!************************************************!*\
+  !*** ./resources/js/components/FormRjalan.vue ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormRjalan_vue_vue_type_template_id_77521742___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormRjalan.vue?vue&type=template&id=77521742& */ "./resources/js/components/FormRjalan.vue?vue&type=template&id=77521742&");
+/* harmony import */ var _FormRjalan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormRjalan.vue?vue&type=script&lang=js& */ "./resources/js/components/FormRjalan.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormRjalan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormRjalan_vue_vue_type_template_id_77521742___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormRjalan_vue_vue_type_template_id_77521742___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/FormRjalan.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/FormRjalan.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/FormRjalan.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormRjalan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FormRjalan.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormRjalan.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormRjalan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/FormRjalan.vue?vue&type=template&id=77521742&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/FormRjalan.vue?vue&type=template&id=77521742& ***!
+  \*******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormRjalan_vue_vue_type_template_id_77521742___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./FormRjalan.vue?vue&type=template&id=77521742& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormRjalan.vue?vue&type=template&id=77521742&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormRjalan_vue_vue_type_template_id_77521742___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormRjalan_vue_vue_type_template_id_77521742___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/FormRrawat.vue":
+/*!************************************************!*\
+  !*** ./resources/js/components/FormRrawat.vue ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormRrawat_vue_vue_type_template_id_a698f590___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormRrawat.vue?vue&type=template&id=a698f590& */ "./resources/js/components/FormRrawat.vue?vue&type=template&id=a698f590&");
+/* harmony import */ var _FormRrawat_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormRrawat.vue?vue&type=script&lang=js& */ "./resources/js/components/FormRrawat.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormRrawat_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormRrawat_vue_vue_type_template_id_a698f590___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormRrawat_vue_vue_type_template_id_a698f590___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/FormRrawat.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/FormRrawat.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/FormRrawat.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormRrawat_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FormRrawat.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormRrawat.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormRrawat_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/FormRrawat.vue?vue&type=template&id=a698f590&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/FormRrawat.vue?vue&type=template&id=a698f590& ***!
+  \*******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormRrawat_vue_vue_type_template_id_a698f590___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./FormRrawat.vue?vue&type=template&id=a698f590& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormRrawat.vue?vue&type=template&id=a698f590&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormRrawat_vue_vue_type_template_id_a698f590___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormRrawat_vue_vue_type_template_id_a698f590___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/FormUgd.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/components/FormUgd.vue ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormUgd_vue_vue_type_template_id_c4a809da___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormUgd.vue?vue&type=template&id=c4a809da& */ "./resources/js/components/FormUgd.vue?vue&type=template&id=c4a809da&");
+/* harmony import */ var _FormUgd_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormUgd.vue?vue&type=script&lang=js& */ "./resources/js/components/FormUgd.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormUgd_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormUgd_vue_vue_type_template_id_c4a809da___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormUgd_vue_vue_type_template_id_c4a809da___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/FormUgd.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/FormUgd.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/FormUgd.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormUgd_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FormUgd.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormUgd.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormUgd_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/FormUgd.vue?vue&type=template&id=c4a809da&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/FormUgd.vue?vue&type=template&id=c4a809da& ***!
+  \****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormUgd_vue_vue_type_template_id_c4a809da___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./FormUgd.vue?vue&type=template&id=c4a809da& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormUgd.vue?vue&type=template&id=c4a809da&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormUgd_vue_vue_type_template_id_c4a809da___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormUgd_vue_vue_type_template_id_c4a809da___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

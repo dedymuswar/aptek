@@ -147,16 +147,17 @@ export default {
         return
       }
 
-      const AB365 =
+      const atas =
         parseInt(this.gillies.jperawatan) *
         parseInt(this.gillies.sharian) *
         parseInt(this.gillies.perhari)
-      const C363JamKerja =
-        (parseInt(this.gillies.perhari) - parseInt(this.gillies.hlibur)) *
-        parseInt(this.gillies.perhari)
-      const hasil = AB365 / C363JamKerja
+
+
+      const bawahsatu =
+        (parseInt(this.gillies.perhari) - parseInt(this.gillies.hlibur)) 
+      const bawah = bawahsatu * parseInt(this.gillies.perhari)
+      const hasil = atas / bawah
       this.hasilakhir = hasil.toFixed(2)
-      // console.log(hasilakhir)
       this.hasilnya = true
     },
     reLoad() {

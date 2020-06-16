@@ -67,7 +67,23 @@
             <div class="card text-white bg-success text-center">
               <div class="card-header">Hasil perhitungan dengan metode Ilyas</div>
               <div class="card-body text-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-users"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
                 <p class="card-text">Jumlah Tenaga yang dibutuhkan =</p>
                 <div style="display:inline-block ">
                   <h2>{{hasilakhir}}</h2>Tenaga Perawat
@@ -115,13 +131,13 @@ export default {
         return
       }
 
-        const atas =
-          parseInt(this.ilyas.jperawatan) * parseInt(this.ilyas.sharian) * parseInt(this.ilyas.jkerja)
-        const bawah =
-          255 * parseInt(this.ilyas.hkerja)
-        const hasil = atas / bawah
-        this.hasilakhir = hasil.toFixed(2)
-    //   console.log(hasilakhir)
+      const atas =
+        parseInt(this.ilyas.jperawatan) *
+        parseInt(this.ilyas.sharian) *
+        parseInt(this.ilyas.jkerja)
+      const bawah = 255 * parseInt(this.ilyas.hkerja)
+      const hasil = atas / bawah
+      this.hasilakhir = hasil.toFixed(2)
       this.hasilnya = true
     },
     reLoad() {

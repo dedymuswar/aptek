@@ -46,8 +46,20 @@ class HomeController extends Controller
         return view('page.ppni');
     }
 
-    public function depkes()
+    public function depkesrrawat()
     {
-        return view('page.depkes');
+        return view('page.depkes.rrawat');
+    }
+    public function depkeskamarok()
+    {
+        return view('page.depkes.kamarok');
+    }
+    public function depkesugd()
+    {
+        return view('page.depkes.ugd');
+    }
+    public function depkesrj()
+    {
+        return view('page.depkes.rj');
     }
 }

@@ -14,8 +14,8 @@
         <div class="col-md-12 stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="mb-4">Metode DEPKES</h2>
-                    <form-depkes></form-depkes>
+                    <h3 class="mb-4">Metode DEPKES - Rawat Jalan</h3>
+                    <form-rjalan></form-rjalan>
                 </div>
             </div>
         </div>

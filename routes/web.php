@@ -28,4 +28,8 @@ Route::get('gillies', 'HomeController@gillies')->name('gillies');
 Route::get('doughlas', 'HomeController@doughlas')->name('doughlas');
 Route::get('ilyas', 'HomeController@ilyas')->name('ilyas');
 Route::get('ppni', 'HomeController@ppni')->name('ppni');
-Route::get('depkes', 'HomeController@depkes')->name('depkes');
+
+Route::get('depkes/ruangan-rawat', 'HomeController@depkesrrawat')->name('depkes.rrawat');
+Route::get('depkes/kamar-ok', 'HomeController@depkeskamarok')->name('depkes.kamarok');
+Route::get('depkes/ugd', 'HomeController@depkesugd')->name('depkes.ugd');
+Route::get('depkes/rawatjalan', 'HomeController@depkesrj')->name('depkes.rj');

@@ -31,11 +31,20 @@
             </a>
         </li>
         <li class="nav-item ">
-            <a href="{{ route('depkes') }}" class="nav-link">
-                <i class="link-icon" data-feather="wind"></i>
-                <span class="menu-title">Depkes</span>
+            <a href="#" class="nav-link">
+              <i class="link-icon" data-feather="wind"></i>
+              <span class="menu-title">Depkes</span>
+              <i class="link-arrow"></i>
             </a>
-        </li>
+            <div class="submenu">
+              <ul class="submenu-item">
+                <li class="nav-item"><a href="{{ route('depkes.rrawat') }}" class="nav-link ">Ruangan rawat</a></li>
+                <li class="nav-item"><a href="{{ route('depkes.kamarok') }}" class="nav-link ">Kamar OK</a></li>
+                <li class="nav-item"><a href="{{ route('depkes.ugd') }}" class="nav-link ">UGD</a></li>
+                <li class="nav-item"><a href="{{ route('depkes.rj') }}" class="nav-link ">Rawat Jalan</a></li>
+              </ul>
+            </div>
+          </li>
         @role('admin')
         <li class="nav-item ">
             <a href="#" class="nav-link">

@@ -26,8 +26,12 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('form-gillies', require('./components/FormGillies.vue').default);
 Vue.component('form-ilyas', require('./components/FormIlyas.vue').default);
 Vue.component('form-ppni', require('./components/FormPpni.vue').default);
-Vue.component('form-depkes', require('./components/FormDepkes.vue').default);
 Vue.component('form-doughlas', require('./components/FormDoughlas.vue').default);
+
+Vue.component('form-rrawat', require('./components/FormRrawat.vue').default);
+Vue.component('form-rjalan', require('./components/FormRjalan.vue').default);
+Vue.component('form-ugd', require('./components/FormUgd.vue').default);
+Vue.component('form-kamarok', require('./components/FormKamarok.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

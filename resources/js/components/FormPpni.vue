@@ -118,6 +118,7 @@ import { required } from "vuelidate/lib/validators"
 export default {
   data() {
     return {
+      minggudlmsetahun : 52,
       ppni: {
         jperawatan: "",
         jttidur: "",
@@ -146,16 +147,19 @@ export default {
       if (this.$v.$invalid) {
         return
       }
-      console.log("oke")
+      console.log(this.minggudlmsetahun);
+      
+      const atassatu =
+        parseInt(this.ppni.jperawatan) * this.minggudlmsetahun
+      const atasdua = (7 * (parseInt(this.ppni.jttidur) * parseInt(this.ppni.bor))) 
 
-      const atas =
-        parseInt(this.ppni.jperawatan) *
-          (7 * (parseInt(this.ppni.jttidur) * parseInt(this.ppni.bor))) +
-        25 / 100
+      const atastiga = atassatu * atasdua
+
+      const atas = atastiga + 25 / 100
+
       const bawah = parseInt(this.ppni.hke) * parseInt(this.ppni.jkp)
       const hasil = atas / bawah
       this.hasilakhir = hasil.toFixed(2)
-      // console.log(hasilakhir)
       this.hasilnya = true
     },
     reLoad() {
