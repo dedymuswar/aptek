@@ -3,7 +3,7 @@
 <div class="page-content">
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <div>
-            <h4 class="mb-3 mb-md-0">Selamat datang <strong>{{ Auth::user()->name }}</strong> di Aptek 10 - Nay</h4>
+            <h4 class="mb-3 mb-md-0">Selamat datang <strong>{{ Auth::user()->name }}</strong> di TANNYA APTeK</h4>
         </div>
     </div>
     <div class="row">

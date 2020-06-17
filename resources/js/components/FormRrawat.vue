@@ -172,13 +172,23 @@ export default {
       }
 
         const jupar = parseInt(this.rrawat.rajam) *  parseInt(this.rrawat.jupas) / parseInt(this.rrawat.hke)
+        
         const bagiatas = parseInt(this.rrawat.juming) + parseInt(this.rrawat.cutan) + parseInt(this.rrawat.lisar)
         const bagibawah = parseInt(this.rrawat.hke)
         const loday = bagiatas / bagibawah * jupar
-        const hasil = (jupar + loday) * 25 / 100
-        this.hasilakhir = parseInt(hasil)
+        const hasil = (jupar + loday)
+        
         this.hasiljupar = parseInt(jupar)
         this.hasilloday = parseInt(loday)
+
+        const subab = jupar + loday
+        const asubab = subab * 0.25
+        // console.log(hasil);
+        // console.log(subab);
+        // console.log(asubab)
+        
+        
+        this.hasilakhir = parseInt(hasil) + parseInt(asubab)
         this.hasilnya = true
     },
     reLoad() {

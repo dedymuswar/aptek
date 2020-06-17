@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="col-md-8 pl-md-0">
                                     <div class="auth-form-wrapper px-4 py-4">
-                                        <a href="#" class="noble-ui-logo d-block" style="font-size:30px">APTEK</a>
+                                        <a href="#" class="noble-ui-logo d-block" style="font-size:30px">TANNYA<span>APTeK</span></a>
                                         <a href="#" class="noble-ui-logo d-block mb-2"><span style="font-size:22px">(Aplikasi Perhitungan Tenaga Keperawatan)</span></a>
                                         <h5 class="text-muted font-weight-normal mb-4">Selamat Datang! Silahkan Login.</h5>
                                         <form class="forms-sample" method="POST" action="{{ route('register') }}">

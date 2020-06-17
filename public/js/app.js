@@ -3450,10 +3450,15 @@ __webpack_require__.r(__webpack_exports__);
       var bagiatas = parseInt(this.rrawat.juming) + parseInt(this.rrawat.cutan) + parseInt(this.rrawat.lisar);
       var bagibawah = parseInt(this.rrawat.hke);
       var loday = bagiatas / bagibawah * jupar;
-      var hasil = (jupar + loday) * 25 / 100;
-      this.hasilakhir = parseInt(hasil);
+      var hasil = jupar + loday;
       this.hasiljupar = parseInt(jupar);
       this.hasilloday = parseInt(loday);
+      var subab = jupar + loday;
+      var asubab = subab * 0.25; // console.log(hasil);
+      // console.log(subab);
+      // console.log(asubab)
+
+      this.hasilakhir = parseInt(hasil) + parseInt(asubab);
       this.hasilnya = true;
     },
     reLoad: function reLoad() {

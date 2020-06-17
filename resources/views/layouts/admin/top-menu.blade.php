@@ -1,7 +1,7 @@
 <div class="container">
     <div class="navbar-content">
         <a href="#" class="navbar-brand">
-            APTEK <span>&nbsp;10 - Nay</span>
+            TANNYA <span>APTeK</span>
         </a>
         {{-- <form class="search-form">
             <div class="input-group">
