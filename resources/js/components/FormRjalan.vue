@@ -95,14 +95,20 @@
           </div>
           <div class="form-group">
             <label class="control-label">Faktor Koreksi (15%)</label>
-            <input
-              type="number"
-              class="form-control"
-              :class="{ 'is-invalid': submitted && $v.rjalan.fakor.$error }"
-              name="fakor"
-              v-model="rjalan.fakor"
-              placeholder="Faktor Koreksi"
-            />
+            <div class="row">
+              <div class="col-sm-10">
+                <input
+                  type="number"
+                  class="form-control"
+                  :class="{ 'is-invalid': submitted && $v.rjalan.fakor.$error }"
+                  name="fakor"
+                  v-model="rjalan.fakor"
+                  placeholder="Faktor Koreksi"
+                />
+              </div>
+              <span class="col-sm-2 pb-1"><h3>%</h3></span>
+            </div>
+
             <div v-if="submitted && $v.rjalan.fakor.$error" class="invalid-feedback">
               <span v-if="!$v.rjalan.fakor.required">Faktor Koreksi harus terisi</span>
             </div>
@@ -149,10 +155,21 @@ export default {
         return
       }
 
-      const atas = parseInt(this.rjalan.rapas) + parseInt(this.rjalan.rajam)
+      const atas = parseInt(this.rjalan.rapas) * parseInt(this.rjalan.rajam)
+      // console.log(this.rjalan.rapas);
+      // console.log(this.rjalan.rajam);
+      
+      
+      // console.log(atas);
+      
       const bawah = parseInt(this.rjalan.jke) * parseInt(this.rjalan.enampuluh)
+      // console.log(bawah);
+      
       const subhasil = atas / bawah
-      const hasil = subhasil + parseInt(this.rjalan.fakor)
+      const fakor = parseInt(this.rjalan.fakor) / 100
+      // console.log(fakor);
+      
+      const hasil = subhasil + fakor
       this.hasilakhir = hasil.toFixed(2)
       //   console.log(hasilakhir)
       this.hasilnya = true

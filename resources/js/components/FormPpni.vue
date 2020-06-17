@@ -40,6 +40,7 @@
               name="bor"
               v-model="ppni.bor"
               class="form-control"
+              lang="nb"
               :class="{ 'is-invalid': submitted && $v.ppni.bor.$error }"
               placeholder="Jumlah hari kerja setahun"
             />
@@ -147,14 +148,18 @@ export default {
       if (this.$v.$invalid) {
         return
       }
-      console.log(this.minggudlmsetahun);
       
       const atassatu =
         parseInt(this.ppni.jperawatan) * this.minggudlmsetahun
-      const atasdua = (7 * (parseInt(this.ppni.jttidur) * parseInt(this.ppni.bor))) 
 
-      const atastiga = atassatu * atasdua
-
+      // console.log(atassatu);
+      
+      const atasdua = 7 * (parseInt(this.ppni.jttidur) * parseFloat(this.ppni.bor))
+      // console.log(atasdua);
+      
+      const atastiga = atassatu * atasdua * 125 / 100
+      // console.log(atastiga);
+      
       const atas = atastiga + 25 / 100
 
       const bawah = parseInt(this.ppni.hke) * parseInt(this.ppni.jkp)

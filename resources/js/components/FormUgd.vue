@@ -50,17 +50,17 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label">Jumlah Pasien</label>
+            <label class="control-label">Jumlah Perawatan / hari</label>
             <input
               type="number"
               class="form-control"
-              :class="{ 'is-invalid': submitted && $v.ugd.jupas.$error }"
-              name="jupas"
-              v-model="ugd.jupas"
-              placeholder="Jumlah Pasien"
+              :class="{ 'is-invalid': submitted && $v.ugd.jupar.$error }"
+              name="jupar"
+              v-model="ugd.jupar"
+              placeholder="Jumlah Perawatan / hari"
             />
-            <div v-if="submitted && $v.ugd.jupas.$error" class="invalid-feedback">
-              <span v-if="!$v.ugd.jupas.required">Jumlah Pasien harus terisi</span>
+            <div v-if="submitted && $v.ugd.jupar.$error" class="invalid-feedback">
+              <span v-if="!$v.ugd.jupar.required">Jumlah Perawatan / hari harus terisi</span>
             </div>
           </div>
           <div class="form-group">
@@ -77,52 +77,26 @@
               <span v-if="!$v.ugd.jke.required">Jam kerja efektif harus terisi</span>
             </div>
           </div>
-        </div>
-        <div class="col-sm-6">
           <div class="form-group">
-            <label class="control-label">Hari minggu dalam 1 tahun</label>
+            <label class="control-label">Jam minggu efektif</label>
             <input
               type="number"
               class="form-control"
-              :class="{ 'is-invalid': submitted && $v.ugd.haming.$error }"
-              name="haming"
-              v-model="ugd.haming"
-              placeholder="Hari minggu dalam 1 tahun"
+              :class="{ 'is-invalid': submitted && $v.ugd.jme.$error }"
+              name="jme"
+              v-model="ugd.jme"
+              placeholder="Jam minggu efektif"
             />
-            <div v-if="submitted && $v.ugd.haming.$error" class="invalid-feedback">
-              <span v-if="!$v.ugd.haming.required">Hari minggu dalam 1 tahun harus terisi</span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label">Cuti tahunan </label>
-            <input
-              type="number"
-              class="form-control"
-              :class="{ 'is-invalid': submitted && $v.ugd.cutan.$error }"
-              name="cutan"
-              v-model="ugd.cutan"
-              placeholder="Cuti tahunan"
-            />
-            <div v-if="submitted && $v.ugd.cutan.$error" class="invalid-feedback">
-              <span v-if="!$v.ugd.cutan.required">Cuti tahunan harus terisi</span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label">Libur Besar </label>
-            <input
-              type="number"
-              class="form-control"
-              :class="{ 'is-invalid': submitted && $v.ugd.lisar.$error }"
-              name="lisar"
-              v-model="ugd.lisar"
-              placeholder="Libur Besar"
-            />
-            <div v-if="submitted && $v.ugd.lisar.$error" class="invalid-feedback">
-              <span v-if="!$v.ugd.lisar.required">Libur Besar harus terisi</span>
+            <div v-if="submitted && $v.ugd.jme.$error" class="invalid-feedback">
+              <span v-if="!$v.ugd.jme.required">Jam minggu efektif harus terisi</span>
             </div>
           </div>
           <button type="button" @click="reLoad" class="btn btn-secondary">Refresh</button>
           <button type="button" @click="onHitung" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-6">
+
+
         </div>
       </div>
     </form>
@@ -136,11 +110,9 @@ export default {
     return {
       ugd: {
         rapas: "",
-        rajam: "",
+        jupar: "",
         jke: "",
-        haming: "",
-        cutan: "",
-        lisar: ""
+        jme:""
       },
       hasilnya: false,
       hasilakhir: "",
@@ -150,11 +122,9 @@ export default {
   validations: {
     ugd: {
       rapas: { required },
-      jupas: { required },
+      jupar: { required },
       jke: { required },
-      haming: { required },
-      cutan: { required },
-      lisar: { required }
+      jme: { required }
     }
   },
   methods: {
@@ -164,15 +134,16 @@ export default {
       if (this.$v.$invalid) {
         return
       }
+      // 15288 atas
+      const atas = parseInt(this.ugd.jupar) * 52 * 7 * parseInt(this.ugd.rapas)
+      console.log(atas)
 
-      const atas = parseInt(this.ugd.rapas) * parseInt(this.ugd.jupas)
-      const bawah = parseInt(this.ugd.jke)
-      const suba = atas / bawah
-      
-      const loday = parseInt(this.ugd.haming) + parseInt(this.ugd.cutan) + parseInt(this.ugd.lisar)
-      
-      const hasil = suba * loday
-      this.hasilakhir = hasil.toFixed(2)
+      // 280 bawah
+      const bawah = parseInt(this.ugd.jme) * 40
+      console.log(bawah)
+
+      const suba = atas / bawah 
+      this.hasilakhir = suba.toFixed(2)
       //   console.log(hasilakhir)
       this.hasilnya = true
     },

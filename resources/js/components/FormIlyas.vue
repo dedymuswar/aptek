@@ -134,9 +134,13 @@ export default {
       const atas =
         parseInt(this.ilyas.jperawatan) *
         parseInt(this.ilyas.sharian) *
-        parseInt(this.ilyas.jkerja)
-      const bawah = 255 * parseInt(this.ilyas.hkerja)
+        parseInt(this.ilyas.hkerja)
+      const bawah = 255 * parseInt(this.ilyas.jkerja)
       const hasil = atas / bawah
+
+      console.log(atas);
+      console.log(bawah);
+      
       this.hasilakhir = hasil.toFixed(2)
       this.hasilnya = true
     },

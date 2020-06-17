@@ -7,7 +7,23 @@
             <div class="card text-white bg-success text-center">
               <div class="card-header">Hasil perhitungan dengan metode Doughlas</div>
               <div class="card-body text-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-users"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
                 <p class="card-text">Jumlah Tenaga yang dibutuhkan =</p>
                 <div style="display:inline-block ">
                   <h2>{{hasilakhir}}</h2>Tenaga Perawat
@@ -18,7 +34,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <h3 class="mb-3">Minimal</h3>
           <div class="form-group">
             <label class="control-label">Pagi</label>
@@ -63,7 +79,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <h3 class="mb-3">Parsial</h3>
           <div class="form-group">
             <label class="control-label">Pagi</label>
@@ -108,7 +124,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <h3 class="mb-3">Total</h3>
           <div class="form-group">
             <label class="control-label">Pagi</label>
@@ -116,6 +132,51 @@
               type="number"
               class="form-control"
               name="tpagi"
+              v-model="total.tpagi"
+              :class="{ 'is-invalid': submitted && $v.total.tpagi.$error }"
+              placeholder="Jumlah pasien x 0.36"
+            />
+            <div v-if="submitted && $v.total.tpagi.$error" class="invalid-feedback">
+              <span v-if="!$v.total.tpagi.required">Jam kerja / hari harus terisi</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Siang</label>
+            <input
+              type="number"
+              class="form-control"
+              name="tsiang"
+              v-model="total.tsiang"
+              :class="{ 'is-invalid': submitted && $v.total.tsiang.$error }"
+              placeholder="Jumlah pasien x 0.30"
+            />
+            <div v-if="submitted && $v.total.tsiang.$error" class="invalid-feedback">
+              <span v-if="!$v.total.tsiang.required">Jam kerja / hari harus terisi</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Malam</label>
+            <input
+              type="number"
+              class="form-control"
+              name="tmalam"
+              v-model="total.tmalam"
+              :class="{ 'is-invalid': submitted && $v.total.tmalam.$error }"
+              placeholder="Jumlah pasien x 0.10"
+            />
+            <div v-if="submitted && $v.total.tmalam.$error" class="invalid-feedback">
+              <span v-if="!$v.total.tmalam.required">Jam kerja / hari harus terisi</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <h3 class="mb-3">Total</h3>
+          <div class="form-group">
+            <label class="control-label">Pagi</label>
+            <input
+              type="number"
+              class="form-control"
+              name="opagi"
               v-model="dpagi"
               value="0"
               readonly
@@ -126,7 +187,7 @@
             <input
               type="number"
               class="form-control"
-              name="tsiang"
+              name="osiang"
               v-model="dsiang"
               value="0"
               readonly
@@ -137,7 +198,7 @@
             <input
               type="number"
               class="form-control"
-              name="tmalam"
+              name="omalam"
               v-model="dmalam"
               value="0"
               readonly
@@ -186,25 +247,33 @@ export default {
       ppagi: { required },
       psiang: { required },
       pmalam: { required }
+    },
+    total: {
+      tpagi: { required },
+      tsiang: { required },
+      tmalam: { required }
     }
   },
   computed: {
     dpagi() {
       const dpagi =
         parseInt(this.minimal.mpagi) * 0.17 +
-        parseInt(this.parsial.ppagi) * 0.27
+        parseInt(this.parsial.ppagi) * 0.27 +
+        parseInt(this.total.tpagi) * 0.36
       return dpagi.toFixed(2)
     },
     dsiang() {
       const dsiang =
         parseInt(this.minimal.msiang) * 0.14 +
-        parseInt(this.parsial.psiang) * 0.15
+        parseInt(this.parsial.psiang) * 0.15 +
+        parseInt(this.total.tsiang) * 0.30
       return dsiang.toFixed(2)
     },
     dmalam() {
       const dmalam =
         parseInt(this.minimal.mmalam) * 0.07 +
-        parseInt(this.parsial.pmalam) * 0.1
+        parseInt(this.parsial.pmalam) * 0.1 +
+        parseInt(this.total.tmalam) * 0.2
       return dmalam.toFixed(2)
     }
   },
@@ -215,7 +284,8 @@ export default {
       if (this.$v.$invalid) {
         return
       }
-
+      console.log(this.total.tpagi);
+      
       const total =
         parseFloat(this.dpagi) +
         parseFloat(this.dsiang) +

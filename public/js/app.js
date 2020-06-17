@@ -2096,6 +2096,67 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2142,19 +2203,30 @@ __webpack_require__.r(__webpack_exports__);
       pmalam: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
       }
+    },
+    total: {
+      tpagi: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      tsiang: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      },
+      tmalam: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
+      }
     }
   },
   computed: {
     dpagi: function dpagi() {
-      var dpagi = parseInt(this.minimal.mpagi) * 0.17 + parseInt(this.parsial.ppagi) * 0.27;
+      var dpagi = parseInt(this.minimal.mpagi) * 0.17 + parseInt(this.parsial.ppagi) * 0.27 + parseInt(this.total.tpagi) * 0.36;
       return dpagi.toFixed(2);
     },
     dsiang: function dsiang() {
-      var dsiang = parseInt(this.minimal.msiang) * 0.14 + parseInt(this.parsial.psiang) * 0.15;
+      var dsiang = parseInt(this.minimal.msiang) * 0.14 + parseInt(this.parsial.psiang) * 0.15 + parseInt(this.total.tsiang) * 0.30;
       return dsiang.toFixed(2);
     },
     dmalam: function dmalam() {
-      var dmalam = parseInt(this.minimal.mmalam) * 0.07 + parseInt(this.parsial.pmalam) * 0.1;
+      var dmalam = parseInt(this.minimal.mmalam) * 0.07 + parseInt(this.parsial.pmalam) * 0.1 + parseInt(this.total.tmalam) * 0.2;
       return dmalam.toFixed(2);
     }
   },
@@ -2167,6 +2239,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
+      console.log(this.total.tpagi);
       var total = parseFloat(this.dpagi) + parseFloat(this.dsiang) + parseFloat(this.dmalam);
       this.hasilakhir = total.toFixed(2);
       this.hasilnya = true;
@@ -2349,9 +2422,12 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var atas = parseInt(this.gillies.jperawatan) * parseInt(this.gillies.sharian) * parseInt(this.gillies.perhari);
-      var bawahsatu = parseInt(this.gillies.perhari) - parseInt(this.gillies.hlibur);
-      var bawah = bawahsatu * parseInt(this.gillies.perhari);
+      var atas = parseInt(this.gillies.jperawatan) * parseInt(this.gillies.sharian) * parseInt(this.gillies.hkerja); // 153300
+      // 1734
+
+      var bawahsatu = parseInt(this.gillies.hkerja) - parseInt(this.gillies.hlibur);
+      var bawah = bawahsatu * parseInt(this.gillies.perhari); // console.log(bawah);
+
       var hasil = atas / bawah;
       this.hasilakhir = hasil.toFixed(2);
       this.hasilnya = true;
@@ -2517,9 +2593,11 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var atas = parseInt(this.ilyas.jperawatan) * parseInt(this.ilyas.sharian) * parseInt(this.ilyas.jkerja);
-      var bawah = 255 * parseInt(this.ilyas.hkerja);
+      var atas = parseInt(this.ilyas.jperawatan) * parseInt(this.ilyas.sharian) * parseInt(this.ilyas.hkerja);
+      var bawah = 255 * parseInt(this.ilyas.jkerja);
       var hasil = atas / bawah;
+      console.log(atas);
+      console.log(bawah);
       this.hasilakhir = hasil.toFixed(2);
       this.hasilnya = true;
     },
@@ -2902,6 +2980,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2947,10 +3026,12 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      console.log(this.minggudlmsetahun);
-      var atassatu = parseInt(this.ppni.jperawatan) * this.minggudlmsetahun;
-      var atasdua = 7 * (parseInt(this.ppni.jttidur) * parseInt(this.ppni.bor));
-      var atastiga = atassatu * atasdua;
+      var atassatu = parseInt(this.ppni.jperawatan) * this.minggudlmsetahun; // console.log(atassatu);
+
+      var atasdua = 7 * (parseInt(this.ppni.jttidur) * parseFloat(this.ppni.bor)); // console.log(atasdua);
+
+      var atastiga = atassatu * atasdua * 125 / 100; // console.log(atastiga);
+
       var atas = atastiga + 25 / 100;
       var bawah = parseInt(this.ppni.hke) * parseInt(this.ppni.jkp);
       var hasil = atas / bawah;
@@ -2977,6 +3058,12 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3138,10 +3225,16 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var atas = parseInt(this.rjalan.rapas) + parseInt(this.rjalan.rajam);
-      var bawah = parseInt(this.rjalan.jke) * parseInt(this.rjalan.enampuluh);
+      var atas = parseInt(this.rjalan.rapas) * parseInt(this.rjalan.rajam); // console.log(this.rjalan.rapas);
+      // console.log(this.rjalan.rajam);
+      // console.log(atas);
+
+      var bawah = parseInt(this.rjalan.jke) * parseInt(this.rjalan.enampuluh); // console.log(bawah);
+
       var subhasil = atas / bawah;
-      var hasil = subhasil + parseInt(this.rjalan.fakor);
+      var fakor = parseInt(this.rjalan.fakor) / 100; // console.log(fakor);
+
+      var hasil = subhasil + fakor;
       this.hasilakhir = hasil.toFixed(2); //   console.log(hasilakhir)
 
       this.hasilnya = true;
@@ -3353,14 +3446,14 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var jupar = parseFloat(this.rrawat.rajam) * parseFloat(this.rrawat.jupas);
-      var bagiatas = parseFloat(this.rrawat.juming) + parseFloat(this.rrawat.cutan) + parseFloat(this.rrawat.lisar);
-      var bagibawah = parseFloat(this.rrawat.hke);
+      var jupar = parseInt(this.rrawat.rajam) * parseInt(this.rrawat.jupas) / parseInt(this.rrawat.hke);
+      var bagiatas = parseInt(this.rrawat.juming) + parseInt(this.rrawat.cutan) + parseInt(this.rrawat.lisar);
+      var bagibawah = parseInt(this.rrawat.hke);
       var loday = bagiatas / bagibawah * jupar;
       var hasil = (jupar + loday) * 25 / 100;
-      this.hasilakhir = hasil.toFixed(2);
-      this.hasiljupar = jupar.toFixed(0);
-      this.hasilloday = loday.toFixed(2);
+      this.hasilakhir = parseInt(hasil);
+      this.hasiljupar = parseInt(jupar);
+      this.hasilloday = parseInt(loday);
       this.hasilnya = true;
     },
     reLoad: function reLoad() {
@@ -3488,43 +3581,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       ugd: {
         rapas: "",
-        rajam: "",
+        jupar: "",
         jke: "",
-        haming: "",
-        cutan: "",
-        lisar: ""
+        jme: ""
       },
       hasilnya: false,
       hasilakhir: "",
@@ -3536,19 +3601,13 @@ __webpack_require__.r(__webpack_exports__);
       rapas: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
       },
-      jupas: {
+      jupar: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
       },
       jke: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
       },
-      haming: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
-      },
-      cutan: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
-      },
-      lisar: {
+      jme: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__["required"]
       }
     }
@@ -3560,14 +3619,16 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.$v.$invalid) {
         return;
-      }
+      } // 15288 atas
 
-      var atas = parseInt(this.ugd.rapas) * parseInt(this.ugd.jupas);
-      var bawah = parseInt(this.ugd.jke);
+
+      var atas = parseInt(this.ugd.jupar) * 52 * 7 * parseInt(this.ugd.rapas);
+      console.log(atas); // 280 bawah
+
+      var bawah = parseInt(this.ugd.jme) * 40;
+      console.log(bawah);
       var suba = atas / bawah;
-      var loday = parseInt(this.ugd.haming) + parseInt(this.ugd.cutan) + parseInt(this.ugd.lisar);
-      var hasil = suba * loday;
-      this.hasilakhir = hasil.toFixed(2); //   console.log(hasilakhir)
+      this.hasilakhir = suba.toFixed(2); //   console.log(hasilakhir)
 
       this.hasilnya = true;
     },
@@ -39216,12 +39277,15 @@ var render = function() {
                                 d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
                               }
                             }),
+                            _vm._v(" "),
                             _c("circle", {
                               attrs: { cx: "9", cy: "7", r: "4" }
                             }),
+                            _vm._v(" "),
                             _c("path", {
                               attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" }
                             }),
+                            _vm._v(" "),
                             _c("path", {
                               attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" }
                             })
@@ -39249,7 +39313,7 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-sm-4" }, [
+          _c("div", { staticClass: "col-sm-3" }, [
             _c("h3", { staticClass: "mb-3" }, [_vm._v("Minimal")]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
@@ -39376,7 +39440,7 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-sm-4" }, [
+          _c("div", { staticClass: "col-sm-3" }, [
             _c("h3", { staticClass: "mb-3" }, [_vm._v("Parsial")]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
@@ -39503,7 +39567,134 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-sm-4" }, [
+          _c("div", { staticClass: "col-sm-3" }, [
+            _c("h3", { staticClass: "mb-3" }, [_vm._v("Total")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [_vm._v("Pagi")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.total.tpagi,
+                    expression: "total.tpagi"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.total.tpagi.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "tpagi",
+                  placeholder: "Jumlah pasien x 0.36"
+                },
+                domProps: { value: _vm.total.tpagi },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.total, "tpagi", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.total.tpagi.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.total.tpagi.required
+                      ? _c("span", [_vm._v("Jam kerja / hari harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [_vm._v("Siang")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.total.tsiang,
+                    expression: "total.tsiang"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.total.tsiang.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "tsiang",
+                  placeholder: "Jumlah pasien x 0.30"
+                },
+                domProps: { value: _vm.total.tsiang },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.total, "tsiang", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.total.tsiang.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.total.tsiang.required
+                      ? _c("span", [_vm._v("Jam kerja / hari harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "control-label" }, [_vm._v("Malam")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.total.tmalam,
+                    expression: "total.tmalam"
+                  }
+                ],
+                staticClass: "form-control",
+                class: {
+                  "is-invalid": _vm.submitted && _vm.$v.total.tmalam.$error
+                },
+                attrs: {
+                  type: "number",
+                  name: "tmalam",
+                  placeholder: "Jumlah pasien x 0.10"
+                },
+                domProps: { value: _vm.total.tmalam },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.total, "tmalam", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.submitted && _vm.$v.total.tmalam.$error
+                ? _c("div", { staticClass: "invalid-feedback" }, [
+                    !_vm.$v.total.tmalam.required
+                      ? _c("span", [_vm._v("Jam kerja / hari harus terisi")])
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-3" }, [
             _c("h3", { staticClass: "mb-3" }, [_vm._v("Total")]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
@@ -39521,7 +39712,7 @@ var render = function() {
                 staticClass: "form-control",
                 attrs: {
                   type: "number",
-                  name: "tpagi",
+                  name: "opagi",
                   value: "0",
                   readonly: ""
                 },
@@ -39552,7 +39743,7 @@ var render = function() {
                 staticClass: "form-control",
                 attrs: {
                   type: "number",
-                  name: "tsiang",
+                  name: "osiang",
                   value: "0",
                   readonly: ""
                 },
@@ -39583,7 +39774,7 @@ var render = function() {
                 staticClass: "form-control",
                 attrs: {
                   type: "number",
-                  name: "tmalam",
+                  name: "omalam",
                   value: "0",
                   readonly: ""
                 },
@@ -40901,6 +41092,7 @@ var render = function() {
                 attrs: {
                   type: "number",
                   name: "bor",
+                  lang: "nb",
                   placeholder: "Jumlah hari kerja setahun"
                 },
                 domProps: { value: _vm.ppni.bor },
@@ -41376,34 +41568,40 @@ var render = function() {
                 _vm._v("Faktor Koreksi (15%)")
               ]),
               _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.rjalan.fakor,
-                    expression: "rjalan.fakor"
-                  }
-                ],
-                staticClass: "form-control",
-                class: {
-                  "is-invalid": _vm.submitted && _vm.$v.rjalan.fakor.$error
-                },
-                attrs: {
-                  type: "number",
-                  name: "fakor",
-                  placeholder: "Faktor Koreksi"
-                },
-                domProps: { value: _vm.rjalan.fakor },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-sm-10" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.rjalan.fakor,
+                        expression: "rjalan.fakor"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: {
+                      "is-invalid": _vm.submitted && _vm.$v.rjalan.fakor.$error
+                    },
+                    attrs: {
+                      type: "number",
+                      name: "fakor",
+                      placeholder: "Faktor Koreksi"
+                    },
+                    domProps: { value: _vm.rjalan.fakor },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.rjalan, "fakor", $event.target.value)
+                      }
                     }
-                    _vm.$set(_vm.rjalan, "fakor", $event.target.value)
-                  }
-                }
-              }),
+                  })
+                ]),
+                _vm._v(" "),
+                _vm._m(0)
+              ]),
               _vm._v(" "),
               _vm.submitted && _vm.$v.rjalan.fakor.$error
                 ? _c("div", { staticClass: "invalid-feedback" }, [
@@ -41439,7 +41637,16 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "col-sm-2 pb-1" }, [
+      _c("h3", [_vm._v("%")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -42029,7 +42236,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
               _c("label", { staticClass: "control-label" }, [
-                _vm._v("Jumlah Pasien")
+                _vm._v("Jumlah Perawatan / hari")
               ]),
               _vm._v(" "),
               _c("input", {
@@ -42037,34 +42244,36 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.ugd.jupas,
-                    expression: "ugd.jupas"
+                    value: _vm.ugd.jupar,
+                    expression: "ugd.jupar"
                   }
                 ],
                 staticClass: "form-control",
                 class: {
-                  "is-invalid": _vm.submitted && _vm.$v.ugd.jupas.$error
+                  "is-invalid": _vm.submitted && _vm.$v.ugd.jupar.$error
                 },
                 attrs: {
                   type: "number",
-                  name: "jupas",
-                  placeholder: "Jumlah Pasien"
+                  name: "jupar",
+                  placeholder: "Jumlah Perawatan / hari"
                 },
-                domProps: { value: _vm.ugd.jupas },
+                domProps: { value: _vm.ugd.jupar },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.ugd, "jupas", $event.target.value)
+                    _vm.$set(_vm.ugd, "jupar", $event.target.value)
                   }
                 }
               }),
               _vm._v(" "),
-              _vm.submitted && _vm.$v.ugd.jupas.$error
+              _vm.submitted && _vm.$v.ugd.jupar.$error
                 ? _c("div", { staticClass: "invalid-feedback" }, [
-                    !_vm.$v.ugd.jupas.required
-                      ? _c("span", [_vm._v("Jumlah Pasien harus terisi")])
+                    !_vm.$v.ugd.jupar.required
+                      ? _c("span", [
+                          _vm._v("Jumlah Perawatan / hari harus terisi")
+                        ])
                       : _vm._e()
                   ])
                 : _vm._e()
@@ -42109,58 +42318,11 @@ var render = function() {
                       : _vm._e()
                   ])
                 : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-6" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { staticClass: "control-label" }, [
-                _vm._v("Hari minggu dalam 1 tahun")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.ugd.haming,
-                    expression: "ugd.haming"
-                  }
-                ],
-                staticClass: "form-control",
-                class: {
-                  "is-invalid": _vm.submitted && _vm.$v.ugd.haming.$error
-                },
-                attrs: {
-                  type: "number",
-                  name: "haming",
-                  placeholder: "Hari minggu dalam 1 tahun"
-                },
-                domProps: { value: _vm.ugd.haming },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.ugd, "haming", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm.submitted && _vm.$v.ugd.haming.$error
-                ? _c("div", { staticClass: "invalid-feedback" }, [
-                    !_vm.$v.ugd.haming.required
-                      ? _c("span", [
-                          _vm._v("Hari minggu dalam 1 tahun harus terisi")
-                        ])
-                      : _vm._e()
-                  ])
-                : _vm._e()
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
               _c("label", { staticClass: "control-label" }, [
-                _vm._v("Cuti tahunan ")
+                _vm._v("Jam minggu efektif")
               ]),
               _vm._v(" "),
               _c("input", {
@@ -42168,77 +42330,32 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.ugd.cutan,
-                    expression: "ugd.cutan"
+                    value: _vm.ugd.jme,
+                    expression: "ugd.jme"
                   }
                 ],
                 staticClass: "form-control",
-                class: {
-                  "is-invalid": _vm.submitted && _vm.$v.ugd.cutan.$error
-                },
+                class: { "is-invalid": _vm.submitted && _vm.$v.ugd.jme.$error },
                 attrs: {
                   type: "number",
-                  name: "cutan",
-                  placeholder: "Cuti tahunan"
+                  name: "jme",
+                  placeholder: "Jam minggu efektif"
                 },
-                domProps: { value: _vm.ugd.cutan },
+                domProps: { value: _vm.ugd.jme },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.ugd, "cutan", $event.target.value)
+                    _vm.$set(_vm.ugd, "jme", $event.target.value)
                   }
                 }
               }),
               _vm._v(" "),
-              _vm.submitted && _vm.$v.ugd.cutan.$error
+              _vm.submitted && _vm.$v.ugd.jme.$error
                 ? _c("div", { staticClass: "invalid-feedback" }, [
-                    !_vm.$v.ugd.cutan.required
-                      ? _c("span", [_vm._v("Cuti tahunan harus terisi")])
-                      : _vm._e()
-                  ])
-                : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { staticClass: "control-label" }, [
-                _vm._v("Libur Besar ")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.ugd.lisar,
-                    expression: "ugd.lisar"
-                  }
-                ],
-                staticClass: "form-control",
-                class: {
-                  "is-invalid": _vm.submitted && _vm.$v.ugd.lisar.$error
-                },
-                attrs: {
-                  type: "number",
-                  name: "lisar",
-                  placeholder: "Libur Besar"
-                },
-                domProps: { value: _vm.ugd.lisar },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.ugd, "lisar", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm.submitted && _vm.$v.ugd.lisar.$error
-                ? _c("div", { staticClass: "invalid-feedback" }, [
-                    !_vm.$v.ugd.lisar.required
-                      ? _c("span", [_vm._v("Libur Besar harus terisi")])
+                    !_vm.$v.ugd.jme.required
+                      ? _c("span", [_vm._v("Jam minggu efektif harus terisi")])
                       : _vm._e()
                   ])
                 : _vm._e()
@@ -42263,7 +42380,9 @@ var render = function() {
               },
               [_vm._v("Submit")]
             )
-          ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-6" })
         ])
       ]
     )

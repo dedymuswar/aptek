@@ -171,14 +171,14 @@ export default {
         return
       }
 
-        const jupar = parseFloat(this.rrawat.rajam) *  parseFloat(this.rrawat.jupas)
-        const bagiatas = parseFloat(this.rrawat.juming) + parseFloat(this.rrawat.cutan) + parseFloat(this.rrawat.lisar)
-        const bagibawah = parseFloat(this.rrawat.hke)
+        const jupar = parseInt(this.rrawat.rajam) *  parseInt(this.rrawat.jupas) / parseInt(this.rrawat.hke)
+        const bagiatas = parseInt(this.rrawat.juming) + parseInt(this.rrawat.cutan) + parseInt(this.rrawat.lisar)
+        const bagibawah = parseInt(this.rrawat.hke)
         const loday = bagiatas / bagibawah * jupar
         const hasil = (jupar + loday) * 25 / 100
-        this.hasilakhir = hasil.toFixed(2)
-        this.hasiljupar = jupar.toFixed(0)
-        this.hasilloday = loday.toFixed(2)
+        this.hasilakhir = parseInt(hasil)
+        this.hasiljupar = parseInt(jupar)
+        this.hasilloday = parseInt(loday)
         this.hasilnya = true
     },
     reLoad() {

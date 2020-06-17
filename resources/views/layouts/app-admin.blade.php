@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from www.nobleui.com/laravel/template/horizontal-menu/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Jan 2020 09:05:24 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>{{ config('app.name', 'SIM Ketenagaan') }}</title>
   

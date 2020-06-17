@@ -150,12 +150,17 @@ export default {
       const atas =
         parseInt(this.gillies.jperawatan) *
         parseInt(this.gillies.sharian) *
-        parseInt(this.gillies.perhari)
-
+        parseInt(this.gillies.hkerja) 
+     
+// 153300
+// 1734
 
       const bawahsatu =
-        (parseInt(this.gillies.perhari) - parseInt(this.gillies.hlibur)) 
+        (parseInt(this.gillies.hkerja) - parseInt(this.gillies.hlibur)) 
       const bawah = bawahsatu * parseInt(this.gillies.perhari)
+      
+      // console.log(bawah);
+      
       const hasil = atas / bawah
       this.hasilakhir = hasil.toFixed(2)
       this.hasilnya = true
