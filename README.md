@@ -13,6 +13,9 @@ Perhitungan ketenagaan dengan metode:
 - PPNI
 - DEPKES
 
+## Demo
+
+URL : https://dry-bastion-18609.herokuapp.com/login
 
 ## Install
 
