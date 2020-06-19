@@ -14,3 +14,10 @@ Perhitungan ketenagaan dengan metode:
 - DEPKES
 
 
+## Install
+
+- Clone repo
+- composer install
+- php artisan migrate
+- DONE
+
