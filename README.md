@@ -1,5 +1,6 @@
 <p align="center">![Alt text](/public/ss/logos.png?raw=true "Optional Title")</p>
 
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
